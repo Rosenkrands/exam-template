@@ -1,0 +1,101 @@
+\documentclass{beamer}
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% american mathematical society
+\usepackage{amsmath,amsthm,amssymb}
+
+% reversed cases enviroment
+\newenvironment{rcases}{\left.\begin{aligned}}{\end{aligned}\right\rbrace}
+
+% drawing functionality
+\usepackage{tikz}
+\usetikzlibrary{matrix,patterns}
+
+% equation numbering
+\numberwithin{equation}{section}
+
+% theorem types
+\newtheorem{proposition}{Proposition}
+
+% math operators
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\var}{Var}
+\DeclareMathOperator*{\cov}{Cov}
+\DeclareMathOperator{\VaR}{VaR}
+\DeclareMathOperator{\cvar}{CVaR}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+
+% additional mathematical fonts
+\usepackage{mathrsfs}
+
+% remove navigation bar
+\beamertemplatenavigationsymbolsempty
+
+% add slide numbers
+\setbeamertemplate{footline}[frame number]
+
+% title
+\title{Integration Theory}
+\subtitle{Exam}
+\author{Kasper Rosenkrands}
+\institute{Aalborg University}
+\date{S20}
+
+% toc at each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
+
+% definition of comment function itself
+\newcommand{\comment}[1]{
+    \begin{center}
+        \colorbox{yellow}{
+            \textsf{
+                \textbf{#1}
+            }
+        }
+    \end{center}
+}
+\newcommand{\task}[1]{
+    \begin{center}
+        \colorbox{red}{
+            \textsf{
+                \textbf{#1}
+            }
+        }
+    \end{center}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Lebesgue integration theory}
+
+\subsection{Definitions}
+
+\begin{frame}\frametitle{{\normalsize \secname} \\ {\large \subsecname}}
+    \begin{definition}[$\sigma$-algebra]
+        A family $m$ of subsets of a set $X$ is said to be a $\sigma$-algebra if
+        \begin{enumerate}
+            \item $\emptyset, X$ belongs to $m$
+            \item If $A$ belongs to $X$, then the complement $\mathcal{C}(A) = X \setminus A$ belongs to $m$. 
+            \item If $(A_n)$ is a sequence of sets in in $X$ then the infinte union belongs to $X$. 
+        \end{enumerate}
+        An ordered pair $(X, m)$ consisting of a set $X$ and a $\sigma$-algebra $m$ of subsets of $X$ is called measurable space.
+    \end{definition}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm,amssymb}
+\newtheorem{theorem}{Theorem}[section]
+\numberwithin{equation}{section}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+{\huge\textbf{Integration Theory}}\\[2mm]
+{\Large Kasper Rosenkrands}\\[2cm]
+{\large MATØK6}\\[2mm]
+{\large Spring 2020}
+\end{center}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Lebesque Integration Theory}
+(Chapter 2-5 of Bartle's book, the most important results are: monotone convergence theorem, Fatou's lemma and Lebesgue dominated convergence theorem)
+
+4.6 - Monotone Convergence Thereom
+
+\begin{theorem}[Monotone Convergence Thereom]
+    If $(f_n)$ is a monotone increasing sequence of functions in $M^+(X,m)$ which converges to $f$, then
+    \begin{align}\label{eq:b4.6}
+        \int f \,d\mu = \lim \int f_n  \,d\mu. 
+    \end{align}
+\end{theorem}
+\end{document}
